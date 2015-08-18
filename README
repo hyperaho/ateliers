@@ -1,0 +1,12 @@
+Un petit compilateur brainfuck:
+
+*   ./transpiler fichier.bf
+*   ou ./transpiler-asm fichier.bf
+
+le compilateur assembleur ne fonctionne pas très bien, c'est parce que je l'ai baclé...
+comme un ... eurehm, peintre en batiment le vendredi.
+Peut être qu'un jour je m'y repencherai, mais actuellement la version C est logiquement
+bien plus performante (merci -O3 et toutes tes optimisations qui trivialisent mes
+benchmarks !)
+
+tousasélibr

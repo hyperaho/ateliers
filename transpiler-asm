@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "Compilation (allala PHONY)"
+make
+touch out.s
+erl -I include -pa ebin -s mainasm run $1  -noshell > out.s
+as out.s -o binaries.o
+gcc binaries.o -o a.out
+./a.out
+rm -rf a.out
+rm -rf binaries.o
+rm -rf out.s

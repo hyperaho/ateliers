@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "Compilation (allala PHONY)"
+make
+touch out.c
+erl -I include -pa ebin -s main run $1  -noshell > out.c
+gcc -O3 -o a.out out.c
+gcc out.c -S
+rm -rf out.c
+echo "Execute...."
+./a.out
+rm -rf ./a.out
